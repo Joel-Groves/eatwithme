@@ -1,6 +1,5 @@
 //Adapted from https://github.com/bizz84/coding-with-flutter-login-demo/blob/master/lib/main.dart
 
-import 'package:eatwithme/pages/interests/interests.dart';
 import 'package:eatwithme/pages/map/map.dart';
 import 'package:eatwithme/pages/profile/editProfile.dart';
 import 'package:eatwithme/pages/profile/profile.dart';
