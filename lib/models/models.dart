@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 import 'package:geoflutterfire/geoflutterfire.dart';
 
-class User extends Equatable {
+class User {
   final String uid;
   final String aboutMe;
   final String displayName;
