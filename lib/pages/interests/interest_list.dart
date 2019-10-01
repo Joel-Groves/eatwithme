@@ -24,14 +24,22 @@ class _InterestListState extends State<InterestList> {
     if (dbInterests == null || userInterests == null) {
       return Expanded(child: LoadingCircle(),);
     }
+
+    String query = "";
+    List<Interest> filteredInterestList;
+    for(int i = 0; i < dbInterests.length; i++)
+    {
+      if(dbInterests.elementAt(i).toString().contains(query.toLowerCase()))
+        filteredInterestList.add(dbInterests.elementAt(i));
+    }
     
     return Expanded(
         child: GridView.builder(
-            itemCount: dbInterests.length,
+            itemCount: filteredInterestList.length,
             gridDelegate:
                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
             itemBuilder: (BuildContext context, int index) {
-              var interest = dbInterests.elementAt(index);
+              var interest = filteredInterestList.elementAt(index);
 
               if (interest == null) return LoadingCircle();
 
